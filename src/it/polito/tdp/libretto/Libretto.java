@@ -20,7 +20,26 @@ public class Libretto {
 	 */
 	public void add(Voto voto) {
 		this.voti.add(voto); 			//MENO CONOSCO MEGLIO è
-	
 	}
+	
+//	public void stampaVoti(int voto) {
+//		
+//	}
+//	public String stampaVoti2(int voto) {
+//		
+//	}
+	public List<Voto> cercaVoti(int voto){			//DEVO PASSARE IL PIù GENERALE POSSIBILE PER FARLO ELABORARE AL DI FUORI, SEPARO
+		List<Voto> result=new ArrayList<Voto>();	//RICERCA E FORMATTAZIONE IN DUE CLASSI DIVERSE
+		for(Voto temp:this.voti) {
+			if(temp.getVotoOttenuto()==voto) {		//così facendo creo link all'oggetto
+				result.add(temp);
+			}
+		}
+			return result;
+	}
+	
+	
+	
+	
 	
 }
