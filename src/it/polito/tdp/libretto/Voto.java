@@ -1,8 +1,8 @@
 package it.polito.tdp.libretto;
-
 import java.time.LocalDate;
 
 public class Voto {
+	
 	private int votoOttenuto;
 	private String nomeCorso;
 	private LocalDate data; // java.util.date o java.util.calendar più BUG che bit
@@ -33,6 +33,12 @@ public class Voto {
 	}
 	public void setData(LocalDate data) {
 		this.data = data;
+	}
+
+
+	@Override
+	public String toString() {
+		return String.format("Voto [votoOttenuto=%s, nomeCorso=%s, data=%s]", votoOttenuto, nomeCorso, data);
 	}
 	
 	
